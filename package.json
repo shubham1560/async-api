@@ -1,0 +1,49 @@
+{
+  "name": "refactor-promises-to-async-await",
+  "version": "1.0.0",
+  "description": "Refactor Promises to Async Await",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "npm-run-all -s test:code",
+    "test:code": "mocha tests/**",
+    "test-watch": "npm-run-all  -p -r test-watch:code",
+    "test-watch:code": "mocha tests/** --bail --watch --watch-extensions html",
+    "test:module2": "mocha tests/module2.spec.js",
+    "test:module3": "mocha tests/module3.spec.js",
+    "test:module4": "mocha tests/module4.spec.js",
+    "test:module5": "mocha tests/module5.spec.js",
+    "test:module6": "mocha tests/module6.spec.js",
+    "test:module7": "mocha tests/module7.spec.js",
+    "test:module8": "mocha tests/module8.spec.js",
+    "test:module9": "mocha tests/module9.spec.js"
+  },
+  "author": "Marques Woodson",
+  "license": "MIT",
+  "devDependencies": {
+    "acorn": "^7.1.1",
+    "chai": "^4.2.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.12.0",
+    "minimist": ">=1.2.2",
+    "mocha": "^7.0.1",
+    "npm-run-all": "^4.0.2",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.3.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "src/data",
+        "staticOutDir": "data"
+      }
+    ]
+  },
+  "dependencies": {
+    "data": "^0.6.1",
+    "lodash": "^4.17.15"
+  }
+}
